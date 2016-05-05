@@ -1,0 +1,81 @@
+/*@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,500,700);
+*/
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    background: #1D1D1D;
+    color: #EFEFEF;
+}
+
+/* Typo */
+
+p{
+    
+}
+
+a{
+    
+}
+
+h1,h2,h3,h4,h5 {
+    
+}
+
+
+/* Wrapper */
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 600px;
+    
+} 
+
+/* Die Zählfelder */
+
+.wrapper-count {
+    width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.player-1,.player-2 {
+    height: 50%;
+    text-align: center;
+    padding: 10vw;
+    font-size: 40px;
+}
+
+/* Die Logs */
+
+.wrapper-log {
+    width: 50%;
+    display: flex;
+    padding: 10vw 0;
+    flex-direction: row;
+    border-left: 1px solid #272727;
+}
+
+.log-1,.log-2 {
+    width: 50%;
+    text-align: center;
+}
+
+
+.menu {
+    text-align: center;
+}
+
+
+.clear {
+    clear: both;
+}
