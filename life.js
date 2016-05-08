@@ -5,6 +5,7 @@
 
 $('.wrapper-count button').on('click', function count() {
     
+    // abgeschauter Timer reset von Stackoverflow
     var timer = null;
     if (timer) {
         clearTimeout(timer); //cancel the previous timer.
