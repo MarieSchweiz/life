@@ -2,15 +2,13 @@
 
 // player zählen
 
+var timer;
 
 $('.wrapper-count button').on('click', function count() {
-    
+
     // abgeschauter Timer reset von Stackoverflow
-    var timer = null;
-    if (timer) {
-        clearTimeout(timer); //cancel the previous timer.
-        timer = null;
-    }
+    clearTimeout(timer); //cancel the previous timer.
+    
 
     //Den Spielernamen durch "value" abfragen
     var playernumber = $(this).val();
@@ -77,8 +75,7 @@ $('.wrapper-count button').on('click', function count() {
         
         
   
-    }, 5000);
+    }, 3400);
 
 });
 
-var Logtimer = 3;
