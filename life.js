@@ -75,7 +75,7 @@ $('.wrapper-count button').on('click', function count() {
         
         
   
-    }, 5000);
+    }, 3400);
 
 });
 
