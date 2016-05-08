@@ -2,25 +2,35 @@
 
 // player zählen
 
-$('.wrapper-count button').on('click', function count(playernumber) {
+
+$('.wrapper-count button').on('click', function count() {
     
-    //wie bekomm ich jetzt die spielernummer da rein
+    //Den Spielernamen durch "value" abfragen
+    var playernumber = $(this).val();
     
-    var playernumber = $('button').parent();
+    // Eigentlich will ich hier nur herausfinden welche art button gedrückt wurde und was ich dann rechnen soll. 
+    var buttontype = $(this).html();
     
-    // Wie zum henker komm ich jetzt an die information welcher button zu wem gehört...parent irgendwas.    
-    var numberofchange = $('span').text();
-    var buttontype = $('button').text();
-    
+    // Leben wäre jetzt das was hier reingehört.    
+    var life = $('span.' + playernumber).html();
+   
     // welcher button das war abfragen + oder -
     
-    if ( buttontype === plus ) {
-        // span finden und nehmen
+    if ( buttontype === 'plus' ) {
+        // reschnen
+        var newlife = (parseInt(life) + 1);
+        $('span.' + playernumber).text(newlife);
+       
             
     }
-    else {
-        
+    
+    if ( buttontype === 'minus' ) {
+        // reschnen
+         var newlife = ((life) - 1);
+         $('span.' + playernumber).text(newlife);
+            
     }
+    
     
   
     
