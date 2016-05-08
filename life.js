@@ -17,41 +17,31 @@ $('.wrapper-count button').on('click', function count() {
     // welcher button das war abfragen + oder -
     
     if ( buttontype === 'plus' ) {
-        // reschnen
         
+        // wieder umwandeln
         if (life === "dead"){
             var life = ('0');
         }
-        
+        // reschnen
         var newlife = (parseInt(life) + 1);
-        
         // button wieder aktivieren aber nur wenn der player übereinstimmt
-        if (newlife > 0) {
-             $('button.' + playernumber ).prop('disabled', false);
-             
-        }
+        $('button.' + playernumber ).prop('disabled', false);
         
         // schreiben
         $(('span.') + playernumber).text(newlife);
-        
-        
-       
-            
+      
     }
     
     if ( buttontype === 'minus' ) {
          // reschnen
          var newlife = ((life) - 1);
-         
-         
+
          //button deaktivieren falls man auf 0 leben kommt 
          if (newlife === 0 ){
-               newlife = ('dead');
-              
+               newlife = ('dead');              
                $(this).prop('disabled', true).addClass(playernumber);
                
          }
-         
          
          $('span.' + playernumber).text(newlife);
             
