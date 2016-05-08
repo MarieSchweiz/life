@@ -50,7 +50,19 @@ $('.wrapper-count button').on('click', function count() {
     
   
     // Timeout setzen und log schreiben (wie bekomm ich einen timeout in der warteschleife überschrieben?)
-    $('ul.Player-log-1').Set 
+    setTimeout(function() {
+        
+
+        
+        var playerlife1 = $("span.player-1").html();
+        var playerlife2 = $("span.player-2").html();
+        
+        // wenn ul hat klasse so, append span mit klasse so
+        
+        $('ul.Player-log-1').append('<li>'+ playerlife1 + '</li>');
+        $('ul.Player-log-2').append('<li>'+ playerlife2 + '</li>');
+        
+    }, 100);
     
     
     
