@@ -27,7 +27,13 @@ p{
 }
 
 a{
-    
+    color:#B9E265;
+}
+a:hover{
+    color:#fff;
+}
+a:visited{
+    color:#B9E265;
 }
 
 h1,h2,h3,h4,h5 {
