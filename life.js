@@ -72,10 +72,8 @@ $('.wrapper-count button').on('click', function count() {
          $('ul.Player-log-1').append('<li>' + playerlife1 + '</li>');
          $('ul.Player-log-2').append('<li>' + playerlife2 + '</li>'); 
         }
-        
-        
-  
-    }, 3400);
+
+    }, 3000);
 
 });
 
