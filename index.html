@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=0">
         <title>Lifecounter</title>
         <link rel="stylesheet" href="life.css">
         
@@ -9,37 +9,22 @@
     <body>
         <div class="wrapper">
             <div class="wrapper-count">
-                
-                <div class="player-1 player-field">
-                    <button value="player-1">minus</button>
-                    <span class="player-life player-1">20</span>
-                    <button value="player-1">plus</button>
-                </div>
-                <div class="menu"> <a href="http://goo.gl/forms/l2Fn0IbS0D">Feedback</a> </div>
-                <div class="player-2 player-field">
-                    <button value="player-2">minus</button>
-                    <span class="player-life player-2">20</span>
-                    <button value="player-2">plus</button>
-                </div>
             </div>
             
             <div class="wrapper-log">
-                <div class="log-1 player-2">
-                    <h3>Player-1</h3>
-                    <ul class="Player-log-1">
-                        <li>20</li>
-                    </ul>
-                    
-                </div>
-                <div class="log-2 player-2">
-                    <h3>Player-2</h3>
-                    <ul class="Player-log-2">
-                        <li>20</li>
-                    </ul>                    
-                </div>                
+                 
+                 
+                 <div class="player-options"><button value="add-player">add player</button>
+                 <button value="remove-player" disabled>remove player</button>
+                 </div>        
+            </div>                
             </div>
         </div>
+    <script type='text/javascript' src='node_modules/knockout/build/output/knockout-latest.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    
     <script src="life.js"></script>
+    
+   
     </body>
 </html>

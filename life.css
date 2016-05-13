@@ -86,13 +86,22 @@ h1,h2,h3,h4,h5 {
     padding: 10vw 0;
     flex-direction: row;
     overflow: scroll;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.log-1,.log-2 {
-    width: 50%;
+.log {
     text-align: center;
+    
 }
 
+.player-options {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3vw;
+    text-align: center;
+    
+}
 
 .menu {
     text-align: center;

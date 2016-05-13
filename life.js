@@ -1,6 +1,66 @@
+
+
 // This is life.js
 
-// player zählen
+var settingslife = 20;
+var settingswatch = 200000000;
+var settingslog = true;
+
+// Player default als objekte in einem array, dazu braucht es noch das default zu befüllen
+var Players = [
+    {
+        count: "Player-1",
+        name: "Geralt",
+        color: ["none",],
+        deckname:"unknown",
+        life:20,
+    },
+    {   
+        count: "Player-2",
+        name: "klaus",
+        color: ["none",],
+        deckname:"unknown",
+        life:20,
+    },
+    {   
+        count: "Player-3",
+        name: "Heidi",
+        color: ["none",],
+        deckname:"unknown",
+        life:20,
+    }
+];
+
+// Button klick zum hinzufügen und entfernen der spieler
+
+// Dieses Array wird später mal meine Spielstände mitnehmen
+var Game = [
+];
+
+for (var i = 0; i < Players.length; i++) {
+    
+    var Playerviewmodel = {
+        
+    };
+  
+    var Player = (Players[i].count);
+    var Playername = (Players[i].name);
+    var buttonminus = ('<button value='+ Player + '>minus</button>');
+    var buttonplus = ('<button value='+ Player + '>plus</button>');
+    var span20 = ('<span class='+ Player + '>' + settingslife + '</span>');
+   
+    $("div.wrapper-count").append('<div class='+ Player + ' ' + '/>');
+    $("div." + Player).append(buttonminus, span20, buttonplus);
+    $("div." + Player).children().addClass(Player);
+    $("div.wrapper-count").children().addClass('player-field');
+
+    $("div.wrapper-log").append('<div class='+ Player + '/>');
+    $("div.wrapper-log div."+ Player).addClass("log").add('<h3>'+ Playername +'</h3>').append('<h3>'+ Playername +'</h3>').append('<ul class='+ Player + '/>');
+    
+}
+
+
+// Hier fängt das zählprogramm an
 
 var timer;
 
@@ -59,20 +119,12 @@ $('.wrapper-count button').on('click', function count() {
     
     // wenn ul hat klasse so, append span mit klasse so
     timer = setTimeout(function () {
-        
-        var playerlife1 = $("span.player-1").html();
-        var playerlife2 = $("span.player-2").html();
-        
-        var lastplayerlife1 = $('ul.Player-log-1 li:last-child').html();
-        var lastplayerlife2 = $('ul.Player-log-2 li:last-child').html();
-        
-        if (playerlife1 === lastplayerlife1 && playerlife2 === lastplayerlife2){
+    
+    // hier kommt jetzt irgendwo 
+    for (var i = 0; i < Players.length; i++) {
+        $('ul.'+ Player).append('<li>' + playerlife1 + '</li>');
         }
-        else {
-         $('ul.Player-log-1').append('<li>' + playerlife1 + '</li>');
-         $('ul.Player-log-2').append('<li>' + playerlife2 + '</li>'); 
-        }
-
+    
     }, 3000);
 
 });
